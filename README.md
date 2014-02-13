@@ -15,7 +15,7 @@ Table of Contents
 Overview
 ----
 
-Tyrion is a trading algorithm written in C# using the [TradingMotion SDK] development tools (there is a [VB.net] port too).
+Tyrion is a trading algorithm written in VB.Net using the [TradingMotion SDK] development tools (there is a [C# port] too).
 
 ![OHLC example chart](markdown_files/OHLC.png)
 <sub>__Image footnote:__ Example of Tyrion OHLC financial chart showing some automatic trades</sub>
@@ -53,22 +53,22 @@ TyrionStrategy rules:
 
 Here is a simplified C# source code of Tyrion's _OnNewBar()_ function. The complete code is all contained in [TyrionStrategy.cs] along with comments and definition of parameters.
 
-```csharp
-// ========== ENTRIES ==========
+```VB.net
+If Me.GetOpenPosition() = 0 Then
 
-if (this.GetOpenPosition() == 0)
-{
-	int buySignalLevel = (int)this.GetInputParameter("Stochastic %D Buy signal trigger level");
+    Dim buySignal As Integer = Me.GetInputParameter("Stochastic %D Buy signal trigger level")
 
-	if (stochasticIndicator.GetD()[1] <= buySignalLevel && stochasticIndicator.GetD()[0] > buySignalLevel)
-	{
-		Order buyOrder = new MarketOrder(OrderSide.Buy, 1, "Entry long");
-		limitTakeProfitOrder = new LimitOrder(OrderSide.Sell, 1, Bars.Close[0] + stdDevIndicator.GetStdDev()[0], "Exit long (take profit stop)");
+    If stochasticIndicator.GetD()(1) <= buySignal And stochasticIndicator.GetD()(0) > buySignal Then
 
-		this.InsertOrder(buyOrder);
-		this.InsertOrder(limitTakeProfitOrder);
-	}
-}
+        Dim buyOrder As Order = New MarketOrder(OrderSide.Buy, 1, "Entry long")
+        limitTakeProfitOrder = New LimitOrder(OrderSide.Sell, 1, Bars.Close(0) + stdDevIndicator.GetStdDev()(0), "Exit long (take profit stop)")
+
+        Me.InsertOrder(buyOrder)
+        Me.InsertOrder(limitTakeProfitOrder)
+
+    End If
+
+End If
 ```
 
 Download
@@ -119,7 +119,7 @@ Disclaimer
 
 I am R&D engineer at [TradingMotion LLC], and head of [TradingMotion SDK] platform. Beware, the info here can be a little biased ;)
 
-  [VB.net port]: https://github.com/victormartingarcia/tyrion-trading-strategy-vbnet
+  [C# port]: https://github.com/victormartingarcia/tyrion-trading-strategy-csharp
   [TradingMotion SDK]: http://sdk.tradingmotion.com
   [TyrionStrategy.cs]: TyrionStrategy/TyrionStrategy.cs
   [iSystems platform]: https://www.isystems.com
