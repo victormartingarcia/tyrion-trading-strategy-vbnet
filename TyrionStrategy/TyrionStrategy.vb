@@ -1,11 +1,11 @@
-﻿Imports System
+Imports System
 Imports System.Collections.Generic
-Imports TradingMotion.SDK.Algorithms
-Imports TradingMotion.SDK.Algorithms.InputParameters
-Imports TradingMotion.SDK.Markets.Charts
-Imports TradingMotion.SDK.Markets.Orders
-Imports TradingMotion.SDK.Markets.Indicators.Momentum
-Imports TradingMotion.SDK.Markets.Indicators.StatisticFunctions
+Imports TradingMotion.SDKv2.Algorithms
+Imports TradingMotion.SDKv2.Algorithms.InputParameters
+Imports TradingMotion.SDKv2.Markets.Charts
+Imports TradingMotion.SDKv2.Markets.Orders
+Imports TradingMotion.SDKv2.Markets.Indicators.Momentum
+Imports TradingMotion.SDKv2.Markets.Indicators.StatisticFunctions
 
 Namespace TyrionStrategy
 
