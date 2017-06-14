@@ -20,7 +20,7 @@ Tyrion is a trading algorithm written in VB.Net using the [TradingMotion SDK] de
 ![OHLC example chart](markdown_files/OHLC.png)
 <sub>__Image footnote:__ Example of Tyrion OHLC financial chart showing some automatic trades</sub>
 
-The strategy code is all contained in [TyrionStrategy.cs], including a default parameter combination.
+The strategy code is all contained in [TyrionStrategy.vb], including a default parameter combination.
 
 This default parameter combination has been optimized to run over 60' bars of _DAX Future Index_.
 
@@ -51,7 +51,7 @@ TyrionStrategy rules:
 
 ### Show me the code ###
 
-Here is a simplified C# source code of Tyrion's _OnNewBar()_ function. The complete code is all contained in [TyrionStrategy.cs] along with comments and definition of parameters.
+Here is a simplified C# source code of Tyrion's _OnNewBar()_ function. The complete code is all contained in [TyrionStrategy.vb] along with comments and definition of parameters.
 
 ```VB.net
 If Me.GetOpenPosition() = 0 Then
@@ -76,7 +76,7 @@ Download
 
 First of all, make sure you have Visual Studio 2010 version (or higher). [TradingMotion SDK] is fully compatible with [Visual Studio Express] free versions.
 
-Download TradingMotion [Visual Studio extension], and the windows desktop application [TradingMotionSDK Toolkit installer].
+Download the windows desktop application [TradingMotionSDK Toolkit installer].
 
 
 Quick Start
@@ -119,17 +119,16 @@ Disclaimer
 
 I am R&D engineer at [TradingMotion LLC], and head of [TradingMotion SDK] platform. Beware, the info here can be a little biased ;)
 
-  [C# port]: https://github.com/victormartingarcia/tyrion-trading-strategy-csharp
-  [TradingMotion SDK]: http://sdk.tradingmotion.com
-  [TyrionStrategy.cs]: TyrionStrategy/TyrionStrategy.cs
-  [iSystems platform]: https://www.isystems.com
-  [iSystems.com]: https://www.isystems.com
-  [iSystems]: https://www.isystems.com
-  [TradingMotion LLC]: http://www.tradingmotion.com
-  [TradingMotion]: http://www.tradingmotion.com
-  [Developers]: http://www.tradingmotion.com/Strategies/Developers
-  [Visual Studio Express]: http://www.visualstudio.com/en-us/downloads#d-2010-express
-  [TradingMotion SDK website]: http://sdk.tradingmotion.com
-  [TradingMotionSDK Toolkit installer]: http://sdk.tradingmotion.com/files/TradingMotionSDKInstaller.msi
-  [Visual Studio extension]: http://sdk.tradingmotion.com/files/TradingMotionSDK_VisualStudio.vsix
-  [More documentation in the Getting Started Guide]: http://sdk.tradingmotion.com/GettingStarted
+ [C# port]: https://github.com/victormartingarcia/tyrion-trading-strategy-csharp
+ [TradingMotion SDK]: https://sdk.tradingmotion.com
+ [TyrionStrategy.vb]: TyrionStrategy/TyrionStrategy.vb
+ [iSystems platform]: https://www.isystems.com
+ [iSystems.com]: https://www.isystems.com
+ [iSystems]: https://www.isystems.com
+ [TradingMotion LLC]: https://www.tradingmotion.com
+ [TradingMotion]: https://www.tradingmotion.com
+ [Developers]: https://www.tradingmotion.com/Strategies/Developers
+ [Visual Studio Express]: http://www.visualstudio.com/en-us/downloads#d-2010-express
+ [TradingMotion SDK website]: http://sdk.tradingmotion.com
+ [TradingMotionSDK Toolkit installer]: https://sdk.tradingmotion.com/files/TradingMotionSDKv2Installer.msi
+ [More documentation in the Getting Started Guide]: https//sdk.tradingmotion.com/GettingStarted
